@@ -1,6 +1,7 @@
 import { verifySignature } from "@upstash/qstash/nextjs";
+import { NextApiRequest, NextApiResponse } from "next";
 
-async function handler(req, res) {
+async function handler(req: NextApiRequest, res: NextApiResponse) {
   console.log("If this is printed, the signature has already been verified");
 
   // do stuff
@@ -14,4 +15,3 @@ export const config = {
     bodyParser: false,
   },
 };
-
